@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#12030a">
+<title>Happy Birthday Shikha ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+  --pink:#ff4f91;
+  --hot:#ff1744;
+  --rose:#ff9fc1;
+  --light:#fff0f6;
+  --wine:#4b1531;
+  --dark:#090307;
+  --dark2:#180711;
+  --white:#fff;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Poppins,sans-serif;
+  background:var(--dark);
+  color:white;
+  overflow-x:hidden;
+}
+button,input{font:inherit}
+button{cursor:pointer}
+.hidden{display:none!important}
+
+/* ---------- BACKGROUND EFFECTS ---------- */
+#particles{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:40;
+  overflow:hidden;
+}
+.particle{
+  position:absolute;
+  top:-50px;
+  animation:fall linear forwards;
+  filter:drop-shadow(0 0 8px #ff1744);
+  opacity:.9;
+}
+@keyframes fall{
+  0%{transform:translateY(-60px) rotate(0);opacity:0}
+  10%{opacity:1}
+  100%{transform:translateY(110vh) rotate(540deg);opacity:0}
+}
+.float-heart{
+  position:fixed;
+  bottom:-50px;
+  pointer-events:none;
+  z-index:38;
+  animation:floatUp linear forwards;
+  filter:drop-shadow(0 0 8px #ff4f91);
+}
+@keyframes floatUp{
+  to{transform:translateY(-115vh) translateX(var(--drift)) rotate(25deg);opacity:0}
+}
+
+/* ---------- NAV ---------- */
+.nav{
+  position:fixed;
+  top:16px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:80;
+  display:flex;
+  gap:7px;
+  padding:7px;
+  border:1px solid #ffffff25;
+  background:#10050bd9;
+  backdrop-filter:blur(12px);
+  border-radius:999px;
+  box-shadow:0 10px 40px #0008;
+}
+.nav button{
+  border:0;
+  background:transparent;
+  color:#ffd9e7;
+  padding:9px 13px;
+  border-radius:999px;
+  font-size:12px;
+}
+.nav button:hover,.nav button.active{background:#ff4f9130;color:#fff}
+
+.music{
+  position:fixed;
+  right:17px;
+  top:17px;
+  width:47px;
+  height:47px;
+  border-radius:50%;
+  border:1px solid #ffffff35;
+  background:#16060ddd;
+  color:#ff78ad;
+  z-index:90;
+  box-shadow:0 0 25px #ff174440;
+}
+.music.playing{animation:pulseMusic 1s infinite}
+@keyframes pulseMusic{
+  50%{box-shadow:0 0 35px #ff174480}
+}
+
+/* ---------- COMMON ---------- */
+.section{
+  min-height:100vh;
+  position:relative;
+  overflow:hidden;
+  padding:100px 20px;
+}
+.inner{
+  width:min(1050px,100%);
+  margin:auto;
+  position:relative;
+  z-index:5;
+}
+.script{
+  font-family:'Great Vibes',cursive;
+  font-weight:400;
+}
+.title{
+  text-align:center;
+  font-family:'Great Vibes',cursive;
+  font-weight:400;
+  font-size:clamp(55px,9vw,92px);
+  line-height:1;
+  color:#ff6da4;
+  text-shadow:0 0 20px #ff174460;
+}
+.subtitle{
+  max-width:680px;
+  margin:18px auto 45px;
+  text-align:center;
+  line-height:1.8;
+  color:#ffd9e7;
+  opacity:.85;
+}
+.btn{
+  border:0;
+  padding:14px 27px;
+  border-radius:999px;
+  color:#fff;
+  font-weight:700;
+  background:linear-gradient(135deg,#ff4f91,#c9185d);
+  box-shadow:0 12px 30px #d5266545;
+  transition:.25s;
+}
+.btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 16px 35px #d5266560}
+.outline{
+  background:transparent;
+  border:1px solid #ff82ad;
+  box-shadow:none;
+}
+
+/* ---------- HERO ---------- */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:
+    radial-gradient(circle at 50% 38%,#390914 0,#16050c 36%,#050103 75%,#000 100%);
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  width:600px;
+  height:600px;
+  border-radius:50%;
+  background:#ff174410;
+  filter:blur(45px);
+}
+.stars{position:absolute;inset:0;overflow:hidden}
+.star{
+  position:absolute;
+  width:3px;height:3px;
+  border-radius:50%;
+  background:#fff;
+  box-shadow:0 0 8px #fff;
+  animation:twinkle 2s infinite alternate;
+}
+@keyframes twinkle{
+  from{opacity:.15;transform:scale(.5)}
+  to{opacity:1;transform:scale(1.5)}
+}
+.hero-content{z-index:5;max-width:850px;padding:70px 15px}
+.eyebrow{
+  letter-spacing:4px;
+  text-transform:uppercase;
+  font-size:12px;
+  color:#ff9fc1;
+  margin-bottom:18px;
+}
+.hero-heart{
+  font-size:72px;
+  line-height:1;
+  margin-bottom:18px;
+  filter:drop-shadow(0 0 10px #ff1744) drop-shadow(0 0 35px #ff1744);
+  animation:heartbeat 1.2s infinite;
+}
+@keyframes heartbeat{
+  0%,100%{transform:scale(1)}
+  25%{transform:scale(1.2)}
+  40%{transform:scale(1)}
+  60%{transform:scale(1.12)}
+}
+.hero h1{
+  font-family:'Great Vibes',cursive;
+  font-size:clamp(62px,12vw,130px);
+  font-weight:400;
+  line-height:.9;
+  color:#fff;
+  text-shadow:0 0 8px #fff,0 0 25px #ff1744,0 0 65px #ff1744;
+}
+.hero h1 span{color:#ff4f91}
+.hero h2{
+  margin:22px 0 12px;
+  font-family:'Playfair Display',serif;
+  font-weight:500;
+  font-size:clamp(19px,3vw,30px);
+}
+.hero p{
+  max-width:650px;
+  margin:0 auto 28px;
+  color:#ffdce8;
+  line-height:1.8;
+}
+
+/* gift */
+.gift{
+  width:150px;height:125px;
+  margin:30px auto 25px;
+  position:relative;
+  animation:bob 2s ease-in-out infinite;
+  cursor:pointer;
+}
+@keyframes bob{50%{transform:translateY(-10px) rotate(2deg)}}
+.gift-box{
+  position:absolute;bottom:0;left:10px;
+  width:130px;height:82px;
+  border-radius:6px;
+  background:linear-gradient(90deg,#e92759,#ff527d);
+  border:3px solid #c51d47;
+  box-shadow:0 15px 40px #ff174450;
+}
+.gift-lid{
+  position:absolute;left:4px;top:29px;
+  width:142px;height:28px;
+  background:#ff4f72;
+  border:3px solid #c51d47;
+  border-radius:6px;
+  z-index:2;
+}
+.ribbon-v{position:absolute;left:61px;top:29px;width:27px;height:82px;background:#ffd447;z-index:3}
+.ribbon-h{position:absolute;left:10px;top:53px;width:130px;height:13px;background:#ffd447;z-index:3}
+.bow{
+  position:absolute;left:49px;top:0;width:55px;height:40px;z-index:4;
+}
+.bow:before,.bow:after{
+  content:"";position:absolute;width:32px;height:23px;
+  border:7px solid #e7a900;background:#ffd447;
+  border-radius:50% 50% 45% 15%;top:0;
+}
+.bow:before{left:-1px;transform:rotate(35deg)}
+.bow:after{right:-1px;transform:scaleX(-1) rotate(35deg)}
+
+/* ---------- BIRTHDAY REVEAL ---------- */
+.birthday{
+  background:
+    radial-gradient(circle at center,#310a18 0,#10040a 50%,#050103 100%);
+}
+.birthday-card{
+  max-width:850px;
+  margin:0 auto;
+  padding:48px 30px;
+  text-align:center;
+  border:1px solid #ff4f9140;
+  border-radius:30px;
+  background:#fff8fb;
+  color:var(--wine);
+  box-shadow:0 25px 80px #ff174425;
+  position:relative;
+  transform:rotate(-.5deg);
+}
+.birthday-card:before{
+  content:"";
+  position:absolute;
+  inset:13px;
+  border:1px dashed #dc4c7e;
+  border-radius:20px;
+}
+.birthday-card > *{position:relative}
+.birthday-card .mini-heart{font-size:55px;animation:heartbeat 1.2s infinite}
+.birthday-card h2{
+  font-family:'Great Vibes';
+  font-size:clamp(60px,10vw,100px);
+  font-weight:400;
+  color:#d92c72;
+  text-shadow:0 5px 20px #ffb4cd;
+}
+.birthday-card h3{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(20px,4vw,30px);
+  margin:8px 0 20px;
+}
+.birthday-card p{
+  max-width:680px;
+  margin:auto;
+  font-family:'Playfair Display',serif;
+  font-size:17px;
+  line-height:1.9;
+}
+.signature{
+  margin-top:22px;
+  text-align:right;
+  padding-right:20px;
+  font-family:'Great Vibes';
+  font-size:35px;
+  color:#d52b6d;
+}
+
+/* glowing heart */
+.big-heart-wrap{
+  width:230px;height:205px;
+  margin:65px auto 20px;
+  position:relative;
+}
+.big-heart{
+  position:absolute;
+  width:145px;height:145px;
+  left:43px;top:42px;
+  background:transparent;
+  border-left:5px solid #ff4f91;
+  border-bottom:5px solid #ff4f91;
+  transform:rotate(-45deg);
+  filter:drop-shadow(0 0 12px #ff1744);
+  animation:heartGlow 1.5s infinite alternate;
+}
+.big-heart:before,.big-heart:after{
+  content:"";
+  position:absolute;
+  width:145px;height:145px;
+  border:5px solid #ff4f91;
+  box-shadow:0 0 25px #ff1744;
+}
+.big-heart:before{border-radius:50%;top:-75px;left:-5px}
+.big-heart:after{border-radius:50%;left:75px;top:-5px}
+.heart-inside{
+  position:absolute;
+  z-index:4;
+  left:0;right:0;top:83px;
+  font-weight:700;
+  font-size:18px;
+  color:white;
+  text-shadow:0 0 10px #ff1744;
+}
+@keyframes heartGlow{
+  from{filter:drop-shadow(0 0 6px #ff1744)}
+  to{filter:drop-shadow(0 0 28px #ff1744) drop-shadow(0 0 55px #ff1744)}
+}
+
+/* fireworks */
+.firework{
+  position:absolute;
+  width:5px;height:5px;
+  border-radius:50%;
+  background:#ff4f91;
+  animation:explode 1.7s ease-out forwards;
+  z-index:2;
+}
+@keyframes explode{
+  0%{box-shadow:0 0 0 #ff4f91;opacity:1}
+  100%{
+    box-shadow:
+      0 -110px #ff4f91,78px -78px #ff4f91,110px 0 #ff4f91,
+      78px 78px #ff4f91,0 110px #ff4f91,-78px 78px #ff4f91,
+      -110px 0 #ff4f91,-78px -78px #ff4f91;
+    opacity:0;
+  }
+}
+
+/* ---------- MEMORIES ---------- */
+.memories{background:#fff3f7;color:var(--wine)}
+.memories .title{color:#d92c72;text-shadow:none}
+.memories .subtitle{color:#6d294b}
+.upload{
+  display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:25px 0 35px;
+}
+.upload label{
+  padding:11px 16px;border-radius:12px;
+  background:white;color:#c42464;border:1px solid #ffbad0;
+  cursor:pointer;font-size:13px;box-shadow:0 8px 25px #ff4f9120;
+}
+.upload input{display:none}
+.memory-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.memory{
+  min-height:390px;
+  border-radius:25px;
+  overflow:hidden;
+  position:relative;
+  background:linear-gradient(145deg,#ffcedf,#fff);
+  border:6px solid white;
+  box-shadow:0 18px 45px #5b102e30;
+}
+.memory img{width:100%;height:100%;object-fit:cover;display:block}
+.memory .caption{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:45px 17px 17px;
+  background:linear-gradient(transparent,#4b153de8);
+  color:white;
+}
+.memory .caption b{font-family:'Playfair Display';font-size:19px}
+.tip{text-align:center;font-size:12px;opacity:.65;margin-top:12px}
+.memories .next{text-align:center;margin-top:35px}
+
+/* ---------- LETTER ---------- */
+.letter-section{
+  background:radial-gradient(circle at center,#35101f,#15070e 60%,#090307);
+}
+.letter{
+  max-width:820px;
+  margin:auto;
+  padding:50px;
+  background:#fff8fa;
+  color:var(--wine);
+  border-radius:12px;
+  box-shadow:0 30px 80px #0008;
+  position:relative;
+}
+.letter:before{
+  content:"";
+  position:absolute;inset:12px;
+  border:1px solid #efa0ba;
+  pointer-events:none;
+}
+.letter h3{font-family:'Great Vibes';font-size:58px;color:#d72f70;margin-bottom:20px}
+.letter p{font-family:'Playfair Display';font-size:17px;line-height:2}
+.letter .signature{text-align:right}
+
+/* ---------- FINAL ---------- */
+.final{
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  text-align:center;
+  background:
+    radial-gradient(circle at center,#ffe6f0,#ffabc9 70%,#ff7fab);
+  color:var(--wine);
+}
+.final .eyebrow{color:#9c2459}
+.final .title{color:#d52268;text-shadow:none}
+.final p{max-width:700px;margin:20px auto 30px;line-height:1.9}
+.answers{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
+
+/* ---------- MODAL ---------- */
+.modal{
+  position:fixed;inset:0;
+  z-index:200;
+  display:flex;align-items:center;justify-content:center;
+  padding:20px;
+  background:#000c;
+  backdrop-filter:blur(6px);
+}
+.modal-box{
+  width:min(620px,100%);
+  padding:38px 28px;
+  text-align:center;
+  border-radius:28px;
+  background:#fff0f6;
+  color:var(--wine);
+  box-shadow:0 30px 100px #000b;
+}
+.modal-box h3{font-family:'Great Vibes';font-size:60px;color:#d52b6d}
+.modal-box p{line-height:1.8;margin:12px auto 24px;max-width:500px}
+
+/* ---------- FOOTER ---------- */
+footer{
+  text-align:center;
+  padding:28px 15px;
+  background:#11060c;
+  color:#ffd9e6;
+  font-size:13px;
+}
+
+/* ---------- MOBILE ---------- */
+@media(max-width:720px){
+  .nav{display:none}
+  .music{top:14px;right:14px}
+  .section{padding:85px 15px}
+  .hero-content{padding-top:75px}
+  .hero-heart{font-size:58px}
+  .gift{transform:scale(.9)}
+  .birthday-card{padding:42px 20px}
+  .memory-grid{grid-template-columns:1fr}
+  .memory{min-height:430px}
+  .letter{padding:38px 23px}
+  .letter h3{font-size:50px}
+}
+</style>
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<nav class="nav">
+  <button onclick="go('home')">Home</button>
+  <button onclick="go('birthday')">Birthday</button>
+  <button onclick="go('memories')">Memories</button>
+  <button onclick="go('letter')">Letter</button>
+  <button onclick="go('final')">❤️</button>
+</nav>
+
+<button class="music" id="musicBtn" title="Music">♫</button>
+<audio id="music" loop></audio>
+
+<!-- HERO -->
+<section class="section hero" id="home">
+  <div class="stars" id="stars"></div>
+
+  <div class="hero-content">
+    <div class="eyebrow">A little surprise made with love</div>
+
+    <div class="hero-heart">❤️</div>
+
+    <h1>Happy Birthday<br><span>Shikha</span></h1>
+
+    <h2>My favorite person deserves a beautiful day.</h2>
+
+    <p>
+      I made this little world just for you —
+      because some people deserve more than a simple
+      “Happy Birthday.” They deserve a whole surprise. 💗
+    </p>
+
+    <div class="gift" id="gift" title="Open your surprise">
+      <div class="bow"></div>
+      <div class="gift-lid"></div>
+      <div class="gift-box"></div>
+      <div class="ribbon-v"></div>
+      <div class="ribbon-h"></div>
+    </div>
+
+    <button class="btn" id="openBtn">Open Your Surprise 💝</button>
+  </div>
+</section>
+
+<!-- BIRTHDAY -->
+<section class="section birthday" id="birthday">
+  <div class="inner">
+    <div class="birthday-card">
+      <div class="mini-heart">❤️</div>
+      <h2>Happy Birthday,<br>Shikha</h2>
+      <h3>To the girl who makes my ordinary days special.</h3>
+
+      <p>
+        Thank you for your random messages, your care,
+        your smile, your teasing, your little habits,
+        and all those moments that somehow become my favorite memories.
+      </p>
+
+      <p style="margin-top:15px">
+        I wish you a life full of happiness, success, peace,
+        beautiful surprises and every dream your heart wishes for.
+        And selfishly, I hope I get to be beside you for a lot of it. ❤️
+      </p>
+
+      <div class="signature">
+        With all my love,<br>Subham ❤️
+      </div>
+    </div>
+
+    <div class="big-heart-wrap">
+      <div class="big-heart"></div>
+      <div class="heart-inside">I LOVE YOU ❤️<br>SHIKHA</div>
+    </div>
+
+    <div style="text-align:center">
+      <button class="btn" onclick="go('memories')">Three Pictures, One Beautiful Love Story ❤️✨ →</button>
+    </div>
+  </div>
+</section>
+
+<!-- MEMORIES -->
+<section class="section memories" id="memories">
+  <div class="inner">
+    <h2 class="title">Your Little Memories</h2>
+
+    <p class="subtitle">
+      Your some favourite moments, captured in three photos.
+    </p>
+
+  
+
+    <div class="memory-grid">
+      <div class="memory">
+        <img id="photo0" alt="Favorite photo"
+          src="Pasted image.png">
+        <div class="caption"><b>That cute face ❤️</b><br>The most beautiful part of my world is you.</div>
+      </div>
+
+      <div class="memory">
+        <img id="photo1" alt="Our memory"
+          src="Pasted image (2).jpg">
+        <div class="caption"><b>That cute smile💗</b><br>A Little Piece of My Heart 💗
+Every beat of my heart has a little story about you.</div>
+      </div>
+
+      <div class="memory">
+        <img id="photo2" alt="Favorite moment"
+          src="Pasted image (3).jpg">
+           width='600' height='700'%3E%3Crect width='100%25' height='100%25' fill='%23ffd9e7'/%3E%3Ctext x='50%25' y='48%25' text-anchor='middle' font-size='80'%3E🌹%3C/text%3E%3Ctext x='50%25' y='58%25' text-anchor='middle' font-family='serif' font-size='28' fill='%238d164d'%3EMy favorite moment%3C/text%3E%3C/svg%3E">
+        <div class="caption"><b>My favorite person 🌹</b><br>Still you. Always you.</div>
+      </div>
+    </div>
+
+   
+
+    <div style="text-align:center;margin-top:35px">
+      <button class="btn" onclick="go('letter')">Read My Letter →</button>
+    </div>
+  </div>
+</section>
+
+<!-- LETTER -->
+<section class="section letter-section" id="letter">
+  <div class="inner">
+    <h2 class="title">A Letter For You</h2>
+
+    <p class="subtitle">
+      Some feelings are easier to write than to say.
+    </p>
+
+    <div class="letter">
+      <h3>Dear Shikha,</h3>
+
+      <p>
+       Happy Birthday, my love. ❤️🥹
+      </p>
+
+      <p style="margin-top:15px">
+       First of all, I want you to know how special you are to me. Today is the day someone as
+        beautiful and precious as you came into this world, and honestly, I'm so grateful that our paths crossed and I got the chance to love you.
+      </p>
+
+      <p style="margin-top:15px">
+        Baby, I know I'm not always the perfect boyfriend. Sometimes I overthink, sometimes I don't understand your feelings the way I should, 
+        and sometimes I end up hurting you even when that's the last thing I want to do. But please know that my love for you is genuine. I'm still 
+        learning how to love you better, understand you deeper, and become someone who makes you feel safe, valued, and loved. You deserve that kind of love. 🫶🏻
+      </p>
+      <p style="margin-top:15px">
+        You have a special place in my heart that nobody else could ever take. Your smile, your little talks, your random messages, your cute reactions,
+         and even the smallest things about you mean more to me than you probably realize. Sometimes I catch myself smiling just by thinking about you. 
+         It's crazy how one person can make an ordinary day feel so special just by existing. And for me, that person is you. 💗
+        </p>
+        <p style="margin-top:15px">
+          Even though I haven't seen you in person yet or heard your voice, you have still managed to become such an important part of my life.
+           It makes me excited to think about the day when I finally get to see you, hold your hand, look into your eyes, and tell you how much you mean to me without needing a single text message. 
+           Until that day comes, I'll keep cherishing every little moment we share. 🥹❤️
+        </p>
+        <p style="margin-top:15px">
+          On your birthday, I wish you endless happiness, good health, success, peace, and all the beautiful things your heart desires. 
+          I hope you achieve every dream you're working towards. I hope you smile more, worry less, and always remember how precious you are.
+           And whenever life gets difficult, I hope you never forget that you deserve kindness, patience, and happiness.
+        </p>
+        <p style="margin-top:15px">
+         And baby, I don't just want to be someone who wishes you on your birthday. I want to be someone who celebrates your little achievements,
+          comforts you on your bad days, listens when you need to talk, laughs with you over silly things, and stands beside you while you grow into 
+          the person you dream of becoming.
+        </p>
+        <p style="margin-top:15px">
+         I can't promise that every day will be perfect, but I want to keep trying, keep learning, and keep choosing us with honesty and care. 
+         I want us to build something beautiful, something where we both feel understood, respected, and loved.
+        </p>
+
+      <p style="margin-top:15px">
+        <b>Happy Birthday once again, my Shikha. 🎂💋❤️</b>
+      </p>
+
+      <p style="margin-top:15px">
+        If I could give you one gift today, it would be the ability to see yourself through my eyes, even for a moment.
+         Maybe then you'd understand why you're so special to me and why your happiness means so much to my heart.
+      </p>
+      <p style="margin-top:15px">
+       I hope this new chapter of your life brings you a thousand reasons to smile. And I hope that, in some small way, 
+       I get to be one of those reasons.
+      </p>
+      <p style="margin-top:15px">
+       I love you, my birthday girl. Today, tomorrow, and in all the little moments yet to come. ❤️🫂
+      </p>
+      <div class="signature">
+        Yours,<br>Subham ❤️
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:35px">
+      <button class="btn" onclick="go('final')">One Last Thing... →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="section final" id="final">
+  <div class="inner">
+    <div class="eyebrow">One last question, Shikha...</div>
+
+    <h2 class="title">
+      Will you keep<br>making memories with me? ❤️
+    </h2>
+
+    <p>
+      Because I don't just want one beautiful day with you.
+      I want a collection of little moments —
+      laughs, random conversations, hugs, adventures,
+      silly fights, making up, and a whole lot of love.
+    </p>
+
+    <div class="answers">
+      <button class="btn" onclick="yesAnswer()">Yes, always ❤️</button>
+      <button class="btn outline" id="noBtn">Let me think 😏</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Made with ❤️ by Subham, especially for Shikha.
+</footer>
+
+<!-- MODAL -->
+<div class="modal hidden" id="modal">
+  <div class="modal-box">
+    <h3 id="modalTitle">For You, Shikha ❤️</h3>
+    <p id="modalText"></p>
+    <button class="btn" onclick="closeModal()">Continue 💗</button>
+  </div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+
+/* ---------- NAVIGATION ---------- */
+function go(id){
+  $(id).scrollIntoView({behavior:'smooth'});
+}
+
+/* ---------- STARS ---------- */
+for(let i=0;i<100;i++){
+  const s=document.createElement('span');
+  s.className='star';
+  s.style.left=Math.random()*100+'%';
+  s.style.top=Math.random()*100+'%';
+  s.style.animationDelay=Math.random()*2+'s';
+  s.style.animationDuration=(1.2+Math.random()*2)+'s';
+  $('stars').appendChild(s);
+}
+
+/* ---------- FALLING HEARTS ---------- */
+const symbols=['❤️','💗','💕','💖','💘','🌸','✨'];
+
+function fallingParticle(){
+  const p=document.createElement('span');
+  p.className='particle';
+  p.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+  p.style.left=Math.random()*100+'vw';
+  p.style.fontSize=(12+Math.random()*22)+'px';
+  p.style.animationDuration=(5+Math.random()*7)+'s';
+  document.getElementById('particles').appendChild(p);
+  setTimeout(()=>p.remove(),13000);
+}
+setInterval(fallingParticle,450);
+
+function floatingHeart(){
+  const h=document.createElement('span');
+  h.className='float-heart';
+  h.textContent=['❤️','💗','💕','💖'][Math.floor(Math.random()*4)];
+  h.style.left=Math.random()*100+'vw';
+  h.style.fontSize=(15+Math.random()*24)+'px';
+  h.style.setProperty('--drift',(Math.random()*180-90)+'px');
+  h.style.animationDuration=(6+Math.random()*6)+'s';
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),13000);
+}
+setInterval(floatingHeart,1000);
+
+/* ---------- FIREWORKS ---------- */
+function firework(){
+  const f=document.createElement('div');
+  f.className='firework';
+  f.style.left=(10+Math.random()*80)+'%';
+  f.style.top=(10+Math.random()*60)+'%';
+  $('birthday').appendChild(f);
+  setTimeout(()=>f.remove(),1800);
+}
+setInterval(firework,2200);
+
+/* ---------- OPEN SURPRISE ---------- */
+$('openBtn').onclick=()=>{
+  burst(90);
+  showModal(
+    'I made this little world for you because you deserve something special. Happy Birthday, Shikha! ❤️'
+  );
+  setTimeout(()=>go('birthday'),900);
+};
+$('gift').onclick=()=>$('openBtn').click();
+
+/* ---------- CONFETTI ---------- */
+function burst(count=50){
+  for(let i=0;i<count;i++){
+    const p=document.createElement('span');
+    p.className='particle';
+    p.textContent=['❤️','💗','💕','✨','🌸','🌹'][Math.floor(Math.random()*6)];
+    p.style.left=(20+Math.random()*60)+'vw';
+    p.style.top=(25+Math.random()*25)+'vh';
+    p.style.animationDuration=(2+Math.random()*3)+'s';
+    document.getElementById('particles').appendChild(p);
+    setTimeout(()=>p.remove(),6000);
+  }
+}
+
+/* ---------- PHOTOS ---------- */
+function loadPhoto(event,index){
+  const file=event.target.files[0];
+  if(!file)return;
+
+  const reader=new FileReader();
+  reader.onload=()=>{
+    $('photo'+index).src=reader.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+/* ---------- MODAL ---------- */
+function showModal(text,title='For You, Shikha ❤️'){
+  $('modalTitle').textContent=title;
+  $('modalText').textContent=text;
+  $('modal').classList.remove('hidden');
+}
+function closeModal(){
+  $('modal').classList.add('hidden');
+}
+
+/* ---------- MUSIC ---------- */
+const music=$('music');
+const musicBtn=$('musicBtn');
+let musicPlaying=false;
+
+musicBtn.onclick=()=>{
+  if(!music.src){
+    showModal(
+      music.src='sub_clair-happy-birthday-592177.mp3'
+    );
+    return;
+  }
+
+  if(musicPlaying){
+    music.pause();
+    musicBtn.textContent='♫';
+    musicBtn.classList.remove('playing');
+  }else{
+    music.play();
+    musicBtn.textContent='⏸';
+    musicBtn.classList.add('playing');
+  }
+
+  musicPlaying=!musicPlaying;
+};
+/*
+  EASY MUSIC SETUP:
+  Replace the empty audio source with your file name, for example:
+  music.src = 'birthday-song.mp3';
+*/
+
+/* ---------- RUN-AWAY NO BUTTON ---------- */
+const noBtn=$('noBtn');
+
+function moveNo(){
+  noBtn.style.position='fixed';
+  noBtn.style.left=Math.max(10,Math.random()*(innerWidth-160))+'px';
+  noBtn.style.top=Math.max(10,Math.random()*(innerHeight-80))+'px';
+}
+
+noBtn.addEventListener('mouseover',moveNo);
+noBtn.addEventListener('touchstart',moveNo);
+
+/* ---------- YES ---------- */
+function yesAnswer(){
+  burst(140);
+  showModal(
+    'Then it is a promise. More memories, more laughter, more adventures, and more love. Happy Birthday, Shikha! ❤️',
+    'You Said Yes! 💕'
+  );
+}
+
+/* ---------- CLICK HEARTS ---------- */
+document.addEventListener('click',e=>{
+  if(e.target.closest('button') || e.target.closest('label')) return;
+
+  for(let i=0;i<6;i++){
+    const h=document.createElement('span');
+    h.textContent='❤️';
+    h.style.position='fixed';
+    h.style.left=e.clientX+'px';
+    h.style.top=e.clientY+'px';
+    h.style.zIndex='150';
+    h.style.pointerEvents='none';
+    h.style.fontSize='20px';
+
+    document.body.appendChild(h);
+
+    const x=(Math.random()-.5)*220;
+    const y=(Math.random()-.5)*220;
+
+    h.animate([
+      {transform:'translate(0,0) scale(1)',opacity:1},
+      {transform:`translate(${x}px,${y}px) scale(0)`,opacity:0}
+    ],{
+      duration:900+Math.random()*500,
+      easing:'ease-out'
+    });
+
+    setTimeout(()=>h.remove(),1500);
+  }
+});
+</script>
+
+</body>
+</html>
